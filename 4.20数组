@@ -10,15 +10,70 @@ arr2.lenght=5
 // 获取索引长度
  console[arr.length]    
 // 遍历数组
-for(let i=0;i<arr.length;i++){
-   console.log(arr[i])   
+ for(let i=0;i<arr.length;i++){将数组元素的个数设置为0，然后遍历数组中的每个元素。
+    console.log(arr[i])      console.log（arr[i]）
   }
-for(let i=arr.length-1;i>=0;i--){
-   console.log(arr[i])   
+ for(let i=arr.length-1;i>=0;i--){将数组元素的长度从0到数组长度减1，然后将数组元素的长度减1。
+    console.log(arr[i])      console.log（arr[i]）
     }
-for(value of arr){  
-   console.log(value) 
+ for(value of arr){  
+    console.log(value) 
    }
-console.log(arr)
-console.log(arr[2])
-console.log(arr2)
+ console.log(arr)
+ console.log(arr[2])
+ console.log(arr2)
+
+ //isArray,检查一个对象是否是数组
+ console.log(Array.isArray([1,2,3]))
+    console.log(Array.isArray({name:"zhuo"}))
+    //at,根据索引获取数组中指定的元素，
+    console.log(arr.at(-1))
+    //contact,连接两个或多个数组,并返回一个新数组
+    const arr2=arr.concat(arr1)
+    console.log(arr2)
+    //indexof、lastdexof,查询元素在数组第一次出现的索引,参数，起始位置，找不到返回-1
+     console.log(arr2.indexOf(1,1)) 
+    //join,将一个数组元素连接为字符串，指定一个字符串作为连接符
+    console.log(arr2.join('@-@)'))
+    // slice,切片,会产生一个新的数组对象，进行复制
+    console.log(arr2.slice(0,3))
+    // 浅拷贝,只复制第一层，没有复制属性中的元素，内存
+    const arr3=arr2.slice()
+    // 展开运算符...
+    const arr4=[...arr]
+    // 深拷贝
+    const arr5=structuredClone(arr)
+
+    class person{
+      constructor(name,age){
+        this.name=name
+        this.age=age
+      }
+    }
+    const array=[new person("故辞",18),
+                 new person("救赎",16),
+                 new person("北辰",20),
+                 new person("三阳",19)
+    ]
+    for(let i=0;i<array.length;i++){
+        if(array[i].age<18){
+            console.log(array[i])
+        }
+    }
+
+   /*push在最后添加,返回新数组的长度
+        pop删除并返回数组最后一个元素
+        shift删除并返回数组第一个元素
+        unshit在开始添加
+        reverse翻转数组
+        splice删除、替换、插入数组
+    */
+    const arr=[1,121,32,54]
+    const arr1=arr.push(111)
+    const arr2=arr.pop()
+    const arr3=arr.shift()
+    const arr4=arr.unshift(111)
+    console.log(arr1)
+    console.log(arr2)
+    console.log(arr3)
+    console.log(arr4)
